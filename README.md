@@ -67,7 +67,7 @@ docker compose up -d
 1. Install Go (1.26 or later).
 2. Clone the repository and navigate to the directory:
    ```bash
-   git clone https://github.com/Pablo/ASF-FreeGamesClaimer.git
+   git clone https://github.com/Du-vy/ASF-FreeGamesClaimer.git
    cd ASF-FreeGamesClaimer
    ```
 3. Copy the template `.env` file and configure your variables:
