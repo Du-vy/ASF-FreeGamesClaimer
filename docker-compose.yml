@@ -1,0 +1,21 @@
+version: "3"
+
+services:
+  asf-claim:
+    image: duvydev/asf-freegamesclaimer:latest
+    container_name: asfclaim-go
+    restart: unless-stopped
+    # Uncomment to build the image locally instead of pulling from Docker Hub:
+    # build: .
+    volumes:
+      # Mount the lastlength state file to persist progress across container restarts
+      - ./lastlength:/root/lastlength
+      # Optional: Mount your local .env configuration file
+      # - .env:/root/.env
+    environment:
+      - ASF_PORT=1242
+      - ASF_HOST=localhost
+      - ASF_PASSWORD=
+      - ASF_COMMAND_PREFIX=!
+      - ASF_HTTPS=false
+      - ASF_BOTS=asf # See https://github.com/JustArchiNET/ArchiSteamFarm/wiki/Commands#bots-argument
